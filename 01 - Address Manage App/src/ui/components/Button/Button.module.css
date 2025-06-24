@@ -1,0 +1,78 @@
+.button {
+  border-radius: var(--border-radius-default);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 0.9em;
+  font-weight: bold;
+  max-width: var(--width-input);
+  padding: 0.5em 1em;
+  margin: 0.5em 0;
+  transition: transform 0.1s ease;
+  width: 100%;
+  border: none;
+  position: relative;
+  /* Remove default color, let variants define it */
+}
+
+.button:hover {
+  transform: scale(1.05);
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+/* Primary button variant using CSS variables from global.css */
+.primary {
+  background-color: var(--color-brand);
+  color: var(--color-background);
+  border: 2px solid var(--color-brand);
+}
+
+.primary:hover {
+  background-color: var(--color-brand-hover);
+  border-color: var(--color-brand-hover);
+}
+
+/* Secondary button variant using different color */
+.secondary {
+  background-color: var(--color-brand-secondary);
+  color: var(--color-background);
+  border: 2px solid var(--color-brand-secondary);
+}
+
+.secondary:hover {
+  background-color: var(--color-brand-secondary-hover);
+  border-color: var(--color-brand-secondary-hover);
+}
+
+/* Clear button variant - minimal styling */
+.clear {
+  background-color: var(--color-background);
+  color: var(--color-brand);
+  border: 1px solid var(--color-brand);
+  box-shadow: none;
+}
+
+.clear:hover {
+  background-color: var(--color-accent);
+  color: var(--color-text);
+  border-color: var(--color-text-light);
+}
+
+/* Loading spinner styles */
+.spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-right: 0.5em;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
